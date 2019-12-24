@@ -30,7 +30,7 @@
               <a class="nav-link" href="<?= base_url(); ?>about">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?= base_url(); ?>">Shop</a>
+              <a class="nav-link" href="<?= base_url('shop'); ?>">Shop</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
