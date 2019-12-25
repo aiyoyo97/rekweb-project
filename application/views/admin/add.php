@@ -1,9 +1,13 @@
+<div class="container">
 
-    <div class="container">
-      <div class="row">
-        <div class=" col-6">
-          <br>
-          <h3>Add Product Form</h3>
+  <div class="row mt-3">
+    <div class=" col-md-6">
+
+      <div class="card">
+        <div class="card-header">
+          Form Add Product Data
+        </div>
+        <div class="card-body">
           <form method="post" action="">
               <div class="form-group">
                 <label for="name">Name</label>
@@ -30,11 +34,13 @@
                 <input type="text" class="form-control" id="stock" name="stock">
                 <small><?= form_error('stock') ?></small>
 
-              <button type="submit" class="btn btn-dark mt-3" name="tambah" >Add Product</button>
+                <button type="submit" name="add" class="btn btn-info float-right">Add Data</button>
               
           </form>
-        </div>
-      </div>
+        </div> 
+      </div>   
     </div>
+  </div>
+</div>
 
 
