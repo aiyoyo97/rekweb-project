@@ -1,0 +1,40 @@
+{
+	"menu": [
+		{
+			"category": "skincare",
+			"name": "Kiehl's Calendula",
+			"price": 49500,
+			"image": "calendula.jpg"
+		},
+		{
+			"category": "skincare",
+			"name": "Laneige",
+			"price": 49500,
+			"image": "laneige-bb.jpg"
+		},
+		{
+			"category": "skincare",
+			"name": "Laneige BB Cream",
+			"price": 49500,
+			"image": "cd-cherie.jpg"
+		},
+		{
+			"category": "skincare",
+			"name": "SK-II Essence",
+			"price": 49500,
+			"image": "essence.jpg"
+		},
+		{
+			"category": "skincare",
+			"name": "SK-II Essence",
+			"price": 49500,
+			"image": "lift.jpg"
+		},
+		{
+			"category": "skincare",
+			"name": "Laneige BB Cream",
+			"price": 49500,
+			"image": "radical.jpg"
+		}
+	]
+}

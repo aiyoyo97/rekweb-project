@@ -12,7 +12,7 @@
   </head>
   <body>
 
-<nav class="navbar navbar-expand-lg navbar-light"  style="background-color: rgba(248,139,77,0.84)">
+<nav class="navbar navbar-expand-lg navbar-light"  style="background-color: rgba(245,52,103,0.39)">
     <div class ="container">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,7 +57,6 @@
         </div>
     </div>
 </nav>
-
 
 
 
