@@ -6,10 +6,8 @@ class Shop_admin extends CI_Controller{
     {
         $this->load->model('Shop_model');
         $data['title'] = 'Admin';
-        $data['mahasiswa'] = $this->Shop_model->getAllShop();
-        if( $this->input->post('keyword') ) {
-            $data['shop'] = $this->Shop_model->findProductData();
-        }
+        $data['shop'] = $this->Shop_model->getAllShop();
+
         $this->load->view('template_admin/header', $data);
         $this->load->view('admin/index', $data);
         $this->load->view('template_admin/footer');
