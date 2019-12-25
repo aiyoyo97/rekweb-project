@@ -21,7 +21,7 @@
     <li class="nav-item dropdown no-arrow mx-1">
       
       <li class="nav-item no-arrow">
-        <a class="nav-link" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nama User
+        <a class="nav-link" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User
           <i class="fas fa-user-circle fa-fw"></i>
         </a>
       <li>
