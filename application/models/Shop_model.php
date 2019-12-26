@@ -22,6 +22,12 @@ class Shop_model extends CI_model {
         $this->db->update($table,$data);
     }
 
+    public function searchProduct()
+    {
+        $keyword = $this->input->post('keyword', true);
+        $this->db->like('name',$keyword);
+        return $this->db->get('shop')->result_array();
+    }
 
 
 

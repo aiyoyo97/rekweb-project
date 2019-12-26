@@ -13,6 +13,9 @@ class Shop extends CI_Controller {
     {
         $data['title'] = 'Shop Page';
         $data['shop'] = $this->Shop_model->getAllShop();
+        if( $this->input->post('keyword')){
+            $data['shop']= $this->Shop_model->searchProduct();
+        }
         $this->load->view('templates/header', $data);
         $this->load->view('shop/index', $data);
         $this->load->view('templates/footer');
