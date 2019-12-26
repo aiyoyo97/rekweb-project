@@ -17,8 +17,8 @@
           <div class="col-md-8">
             <div class="input-group mb-3">
               <input type="text" class="form-control input-keyword" placeholder="Search Essence Beauty"/>
-              <div class="input-group-append">
-                <button class="btn btn-light" type="button">Search</button>
+              <div class="input-group-append"  >
+                <button class="btn btn-transparent" style="background-color: rgba(245,52,103,0.39)" type="button">Search</button>
               </div>
             </div>
           </div>
@@ -70,72 +70,30 @@
   <h2 class="font-italic mt-4">/ Best Seller /</h2>
 </div>
 <break>
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
 
-    <div class="row">
-        <?php foreach ($menu as $row):?>  
-      <div class="col-md-4">
+
+
+<div class="row">
+  <?php foreach ($menu as $row):?>  
+      <div class="col-md-3">
         <div class="card-transparent mb-3">
           <img src="assets/img/bestseller/<?= $row["image" ]; ?>" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title"><?=$row["name"]; ?></h5>
-            <h5 class="card-title">Rp. <?=$row["price"]; ?></h5>
-            <a href="#" class="btn btn-outline-danger">Add To Cart</a>
-          </div>
+          <div class="text-center mt-3">
+            <div class="card-body">
+              <h5 class="card-title"><?=$row["name"]; ?></h5><break>
+              <h5 class="card-title">Rp. <?=$row["price"]; ?></h5>
+              <button class="btn btn-transparent" style="background-color: rgba(245,52,103,0.39)" type="button">Add To Cart</button>
+            </div>
+          </div>  
         </div>
       </div>
       <?php endforeach; ?>
-    </div>
-      
-    </div>
-  
-
-    <div class="carousel-item">
-
-      <div class="row">
-        <?php foreach ($menu as $row):?>  
-      <div class="col-md-4">
-        <div class="card-transparent mb-3">
-          <img src="assets/img/bestseller/<?= $row["image" ]; ?>" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title"><?=$row["name"]; ?></h5>
-            <h5 class="card-title">Rp. <?=$row["price"]; ?></h5>
-            <a href="#" class="btn btn-outline-danger">Add To Cart</a>
-          </div>
-        </div>
-      </div>
-      <?php endforeach; ?>
-    </div>
-
-    </div>
-    <div class="carousel-item">
-    <div class="row">
-        <?php foreach ($menu as $row):?>  
-      <div class="col-md-4">
-        <div class="card-transparent mb-3">
-          <img src="assets/img/bestseller/<?= $row["image" ]; ?>" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title"><?=$row["name"]; ?></h5>
-            <h5 class="card-title">Rp. <?=$row["price"]; ?></h5>
-            <a href="#" class="btn btn-outline-danger">Add To Cart</a>
-          </div>
-        </div>
-      </div>
-      <?php endforeach; ?>
-    </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
+
+
+
+
+
 
 
 
@@ -202,6 +160,10 @@
 </div>
 
 </div>
+
+
+
+
 
 
 

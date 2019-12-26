@@ -2,37 +2,25 @@
 	"menu": [
 		{
 			"category": "skincare",
-			"name": "Kiehl's Calendula",
+			"name": "Kiehl's Calendula Toner (250ml)",
 			"price": 49500,
 			"image": "calendula.jpg"
 		},
 		{
 			"category": "skincare",
-			"name": "Laneige",
+			"name": "Laneige BB Cushion Whitening",
 			"price": 49500,
 			"image": "laneige-bb.jpg"
 		},
 		{
 			"category": "skincare",
-			"name": "Laneige BB Cream",
-			"price": 49500,
-			"image": "cd-cherie.jpg"
-		},
-		{
-			"category": "skincare",
-			"name": "SK-II Essence",
-			"price": 49500,
-			"image": "essence.jpg"
-		},
-		{
-			"category": "skincare",
-			"name": "SK-II Essence",
+			"name": "SK-II Clear Lotion (160ml)",
 			"price": 49500,
 			"image": "lift.jpg"
 		},
 		{
 			"category": "skincare",
-			"name": "Laneige BB Cream",
+			"name": "SK-II R.N.A. Essence (50ml)",
 			"price": 49500,
 			"image": "radical.jpg"
 		}
