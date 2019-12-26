@@ -13,14 +13,14 @@ class Admin extends CI_Controller{
     {
         $this->load->model('Shop_model');
         $data['title'] = 'Admin';
-        $data['shop'] = $this->shop_model->getAllShop();
+        $data['shop'] = $this->Shop_model->getAllShop();
 
         $this->load->view('template_admin/header', $data);
         $this->load->view('admin/index', $data);
         $this->load->view('template_admin/footer');
     }
 
-    public function add_action()
+    public function addProduct()
     {
         $name           = $this->input->post('name');
         $category       = $this->input->post('category');
@@ -28,11 +28,32 @@ class Admin extends CI_Controller{
         $price          = $this->input->post('price');
         $stock          = $this->input->post('stock');
         $image          = $this->input->post('image');
-        if ($image = ''){}else{
-            $config ['upload_path'] = './uploads';
-            $config ['allowed_types'] = 'jpg|jpeg|png|gif';
+        if(isset($_FILES['image'])){
+            $error=array();
+            $file_name = $_FILES['image']['name'];
+            $file_size = $_FILES['image']['size'];
+            $file_tmp = $_FILES['image']['tmp_name'];
+            $file_type = $_FILES['image']['type'];
+            $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
 
-         
+            $extensions= array("jpeg", "jpg", "png");
+
+
+            if(in_array($file_ext,$extensions)===false){
+                $error[]="extension not allowed, please choose a JPEG or PNG file.";
+            }
+
+            //2.0 MB = 2097152 bytes
+            if($file_size > 2097152){
+                $error[]="File size must be exactly 2 MB";
+            }
+
+            if(empty($error)==true){
+                move_uploaded_file($file_tmp,"assets/img/fragrance".$file_name);
+                echo "Success";
+            } else {
+                print_r($errors);
+            }
         }
 
         $data = array (
@@ -47,18 +68,19 @@ class Admin extends CI_Controller{
         redirect('admin/index');
     }
 
-    public function edit($id)
+    public function editProduct($id)
     {
+        $this->load->model('Shop_model');
         $where = array('id' => $id);
-        $data['shop'] = $this->shop_model->editProduct($where, 'shop')->result();
+        $data['shop'] = $this->Shop_model->editProduct($where, 'shop')->result();
 
         $this->load->view('template_admin/header', $data);
-        $this->load->view('admin/index', $data);
+        $this->load->view('admin/edit', $data);
         $this->load->view('template_admin/footer');
 
     }
 
-    public function update(){
+    public function updateProduct(){
         $id              = $this->input->post('id');
         $name            = $this->input->post('name');
         $image           = $this->input->post('image');
@@ -81,7 +103,7 @@ class Admin extends CI_Controller{
         );
 
         $this->Shop_model->updateProduct($where, $data, 'shop');
-        redirect('admin/index');
+        redirect('admin/update');
     }
 
 }

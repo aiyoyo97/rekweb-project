@@ -1,9 +1,23 @@
 <div class="container">
-  <button class="btn btn-outline-transparent my-2 my-sm-1" type="submit" ><img src="assets/img/search.svg" width="20" ></button><br>
-  <button type="button" class="btn btn-link-transparent">Login / Register</button><br>
-  <button type="button" class="btn btn-link-transparent">Carts</button>
+  <div class="text-right mt-3">
+    <button type="button" class="btn btn-link-transparent">Login / Sign Up</button>
+    <button type="button" class="btn btn-link-transparent" type="submit" ><img src="assets/img/shopping-cart.svg" width="30" ></button>
+  </div>  
 </div>
 
+
+<div class="container">
+        <div class="row mt-3 justify-content-center">
+          <div class="col-md-8">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control input-keyword" placeholder="Search Essence Beauty"/>
+              <div class="input-group-append">
+                <button class="btn btn-light" type="button">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
  <!-- slider -->
@@ -15,10 +29,10 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-            <img src="assets/img/slider/slider4.jpg" class="d-block w-100">
+            <img src="assets/img/slider/slider7.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img src="assets/img/slider/slider4.jpg" class="d-block w-100">
+            <img src="assets/img/slider/slider8.jpg" class="d-block w-100">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -37,15 +51,15 @@
     <div class="row text-center mt-3">
     <?php foreach ( $shop as $sh ) : ?>
         <div class="col-ms-6 ml-3">
-            <div class="card ml-4 mt-4 border-dark" style="width: 16rem;">
-            <img src="assets/img/fragrance/<?= $sh["image"]; ?>" width="250" height="250">
+            <div class="card ml-3 mt-3 border-dark" style="width: 14rem;">
+            <img src="assets/img/fragrance/<?= $sh["image"]; ?>" width="210" height="240">
 
                 <div class="card-body">
                     <h5 class="card-title"><?= $sh["name"]; ?></h5>
                     <p class="card-text"><?= $sh["description"]; ?></p>
-                    <span class="badge badge-success">RM<?= $sh["price"]; ?></span>
+                    <span class="badge badge-success">Rp<?= $sh["price"]; ?></span>
                     <h5 class="card-title"><?= $sh["stock"]; ?></h5>
-                    <a href="#" class="btn btn-sm btn-primary">Add to Cart</a>
+                    <a href="#" class="btn btn-sm btn-info">Add to Cart</a>
                     <a href="#" class="btn btn-sm btn-primary">Detail</a>
                 </div>
             </div>

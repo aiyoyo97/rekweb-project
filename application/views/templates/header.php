@@ -32,26 +32,6 @@
             <li class="nav-item">
               <a class="nav-link" href="<?= base_url('shop'); ?>">Shop</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Women
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#makeup">Make Up</a>
-                <a class="dropdown-item" href="#skincare">Skin Care</a>
-                <a class="dropdown-item" href="#fragrance">Fragrance</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Men
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#cleanser">Cleanser</a>
-                <a class="dropdown-item" href="#skincare">Skin Care</a>
-                <a class="dropdown-item" href="#fragrance">Fragrance</a>
-                </div>
-            </li>
           </ul>
            
         </div>

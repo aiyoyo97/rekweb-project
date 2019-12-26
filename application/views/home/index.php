@@ -28,6 +28,7 @@
 <div class="w-100 p-3" style="background-transparent: #eee;">
 </div>
 
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -60,7 +61,6 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
 
 
 

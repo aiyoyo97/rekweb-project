@@ -61,9 +61,9 @@
                         <td><?= $sh['stock'] ?></td>
                         <td>
                             
-                            <a href="<?= base_url(); ?>admin/edit/<?= $sh['id'] ?>" class="badge badge-info float-right">edit</a>
+                            <a href="<?= base_url(); ?>admin/editProduct/<?= $sh['id'] ?>" class="badge badge-info float-right">edit</a>
 
-                            <a href="<?= base_url(); ?>admin/edit/<?= $sh['id'] ?>" class="badge badge-info float-right">update</a>
+                            <a href="<?= base_url(); ?>admin/updateProduct/<?= $sh['id'] ?>" class="badge badge-info float-right">update</a>
 
                             <a href="<?= base_url(); ?>admin/delete/<?= $sh['id'] ?>" class="badge badge-danger float-right button-delete">delete</a>
                         </td>
@@ -86,7 +86,7 @@
             </div>
             <div class="modal-body">
 
-                <form action="<?= base_url(). 'admin/add_action'?>" method="post" enctype="multipart/form-data" >
+                <form action="<?= base_url(). 'admin/addProduct'?>" method="post" enctype="multipart/form-data" >
                     <div class="form-group">
                         <label>Name</label>
                         <input type="text" name="name" class="form-control">
