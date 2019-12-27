@@ -7,8 +7,6 @@ function tampilkanSemuaMenu() {
 					data.image +
 					'" class="card-img-top"><div class="card-body"><h5 class="card-title">' +
 					data.name +
-					'</h5><p class="card-text">' +
-					data.description +
 					'</p><h5 class="card-title">Rp. ' +
 					data.price +
 					'</h5><a href="#" class="btn btn-primary">Add To Cart</a></div></div></div>'
@@ -42,8 +40,6 @@ $(".nav-link").on("click", function() {
 					data.image +
 					'" class="card-img-top"><div class="card-body"><h5 class="card-title">' +
 					data.name +
-					'</h5><p class="card-text">' +
-					data.description +
 					'</p><h5 class="card-title">Rp. ' +
 					data.price +
 					'</h5><a href="#" class="btn btn-primary">Add To Cart</a></div></div></div>';
