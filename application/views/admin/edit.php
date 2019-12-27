@@ -7,7 +7,7 @@
             <div class="card-header">
                 Form Edit Data Product
             </div>
-            <?php foreach($shop as $sh) : ?>
+        
                 <form method="post" action="<?= base_url().'admin/editProduct'?>"></form>
                     <div class="form-group">
                         <label>Name</label>
@@ -32,10 +32,11 @@
                     <div class="form-group">
                         <label>Stock</label>
                         <input type="number" name="stock" class="form-control">
-                    </div> 
-                    <button type="submit"name="edit" class="btn btn-primary">Save</button>
+                    </div > 
+                    <a href="<?= base_url('admin/index')?>" class="btn btn-info"><i class=""></i>Edit</a>
+                
                     </form>
-                <?php endforeach; ?>
+                
             </div>
         </div>
     </div>

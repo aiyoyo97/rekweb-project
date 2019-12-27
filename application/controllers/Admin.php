@@ -14,7 +14,9 @@ class Admin extends CI_Controller{
         $this->load->model('Shop_model');
         $data['title'] = 'Admin';
         $data['shop'] = $this->Shop_model->getAllShop();
-
+        if( $this->input->post('keyword')){
+            $data['shop']= $this->Shop_model->searchProduct();
+        }
         $this->load->view('template_admin/header', $data);
         $this->load->view('admin/index', $data);
         $this->load->view('template_admin/footer');
@@ -70,6 +72,7 @@ class Admin extends CI_Controller{
 
     public function editProduct($id)
     {
+        $data['title'] = 'Edit';
         $this->load->model('Shop_model');
         $where = array('id' => $id);
         $data['shop'] = $this->Shop_model->editProduct($where, 'shop')->result();
@@ -80,30 +83,11 @@ class Admin extends CI_Controller{
 
     }
 
-    public function updateProduct(){
-        $id              = $this->input->post('id');
-        $name            = $this->input->post('name');
-        $image           = $this->input->post('image');
-        $description     = $this->input->post('description');
-        $category        = $this->input->post('category');
-        $price           = $this->input->post('price');
-        $stock           = $this->input->post('stock');
+    public function deleteProduct($id) {
+        $this->db->where('id', $id);
+        $this->db->delete('shop');
+        redirect('admin');
 
-        $data = array(
-            'name'          => $name,
-            'image'         => $image,
-            'description'   => $description,
-            'category'      => $category,
-            'price'         => $price,
-            'stock'         => $stock
-        );
-
-        $where = array(
-            'id' => $id
-        );
-
-        $this->Shop_model->updateProduct($where, $data, 'shop');
-        redirect('admin/update');
     }
 
 }

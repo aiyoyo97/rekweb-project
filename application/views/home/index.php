@@ -12,18 +12,20 @@
 </div>
 
 
+<!-- search -->
 <div class="container">
-        <div class="row mt-3 justify-content-center">
-          <div class="col-md-8">
-            <div class="input-group mb-3">
-              <input type="text" class="form-control input-keyword" placeholder="Search Essence Beauty"/>
-              <div class="input-group-append"  >
-                <button class="btn btn-transparent" style="background-color: rgba(245,52,103,0.39)" type="button">Search</button>
-              </div>
-            </div>
-          </div>
+     <div class="row mt-3 justify-content-center">
+        <div class="col-lg-6">
+            <form action="<?= base_url(); ?>shop" method="post">
+                <div class="input-group mb-3"><input type="text" class="form-control" placeholder="Search product.." name="keyword" id="keyword" autocomplete="off">
+                    <div class="input-group-append">
+                         <button class="btn btn-secondary" type="submit" id="buttonFind">search</button>
+                    </div>
+                </div>
+            </form>
         </div>
-      </div>
+    </div>
+</div>
 
 <div class="w-100 p-3" style="background-transparent: #eee;">
 </div>

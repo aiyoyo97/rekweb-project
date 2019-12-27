@@ -5,21 +5,34 @@
   </div>  
 </div>
 
-
+<!-- search -->
 <div class="container">
-        <div class="row mt-3 justify-content-center">
-          <div class="col-md-8">
-            <form action="" method="post">
-            <div class="input-group mb-3">
-              <input type="text" class="form-control input-keyword" placeholder="Search Essence Beauty" name="keyword" >
-              <div class="input-group-append">
-                <button class="btn btn-light" type="submit">Search</button>
-              </div>
+  <div class="row mt-3 justify-content-center">
+    <div class="col-lg-6">
+        <form action="<?= base_url(); ?>shop" method="post">
+          <div class="input-group mb-3"><input type="text" class="form-control" placeholder="Search product.." name="keyword" id="keyword" autocomplete="off">
+            <div class="input-group-append">
+              <button class="btn btn-secondary" type="submit" id="buttonFind">search</button>
             </div>
-            </form>
           </div>
-        </div>
+			  </form>
       </div>
+	</div>
+  
+  <div class="row mt-3">
+        <div class="col-md-3">
+            <?php if(empty($shop)) : ?>
+                <tr>
+                    <td colspan="4">
+                        <div class="alert alert-danger" role="alert">
+                        Data not found!
+                        </div>
+                    </td>
+                </tr>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
 
 
 
@@ -60,10 +73,10 @@
                 <div class="card-body">
                     <h5 class="card-title"><?= $sh["name"]; ?></h5>
                     <p class="card-text"><?= $sh["description"]; ?></p>
-                    <span class="badge badge-success">Rp<?= $sh["price"]; ?></span>
+                    <span class="badge badge-success">Rp. <?= number_format($sh["price"], 0,',',',') ?></span>
                     <h5 class="card-title"><?= $sh["stock"]; ?></h5>
                     <a href="#" class="btn btn-sm btn-info">Add to Cart</a>
-                    <a href="#" class="btn btn-sm btn-primary">Detail</a>
+                    <a href="<?= base_url();?>shop/detail/<?= $sh['id']?>" class="btn btn-sm btn-primary">Detail</a>
                 </div>
             </div>
         </div>

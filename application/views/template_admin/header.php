@@ -12,23 +12,12 @@
   </head>
   <body>
 
-  <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+  <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: rgba(245,52,103,0.39)">
+    <div class ="container">
 
-<a class="navbar-brand mr-1" href="index.html">ESSENCE BEAUTY - ADMIN</a>
 
-    <!-- Navbar -->
-<ul class="navbar-nav ml-auto mr-0 mr-md-3 my-2 my-md-0">
-    <li class="nav-item dropdown no-arrow mx-1">
-      
-      <li class="nav-item no-arrow">
-        <a class="nav-link" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User
-          <i class="fas fa-user-circle fa-fw"></i>
-        </a>
-      <li>
-        <button class="btn btn-primary" href="<?= base_url('home/index');?>">Logout</button>
-      </li>
-    </li>
-</ul>
+    <a class="navbar-brand" href="<?= base_url();?>shop">
+              <img src="assets/img/logo.png" width="90" >   ADMIN
+          </a>
 
 </nav>
-

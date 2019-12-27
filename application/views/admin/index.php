@@ -1,22 +1,42 @@
+
+
+
 <div class="container">
     <div class="row">
         <div class="col-12">
             <h1 class="mt-3">Product List</h1>
+            
 
         <a href="<?= base_url('admin/add')?>" class="btn btn-dark col-lg-3" data-toggle="modal" data-target="#add">Add Product</a>
 
-            <div class="row mt-3">
-                <div class="col-md-6">
-                    <form action="" method="post">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Find Product.." name="keyword">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="submit">Find</button>
-                        </div>
-                        </div>
-                    </form>
-                </div>
+<!-- search -->
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-lg-6">
+        <form action="<?= base_url(); ?>admin/index" method="post">
+          <div class="input-group mb-3"><input type="text" class="form-control" placeholder="Search product.." name="keyword" id="keyword" autocomplete="off">
+            <div class="input-group-append">
+              <button class="btn btn-secondary" type="submit" id="buttonFind">search</button>
             </div>
+          </div>
+		</form>
+      </div>
+	</div>
+
+  <div class="row mt-3">
+        <div class="col-md-3">
+            <?php if(empty($shop)) : ?>
+                <tr>
+                    <td colspan="4">
+                        <div class="alert alert-danger" role="alert">
+                        Data not found!
+                        </div>
+                    </td>
+                </tr>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
 
 
         <div class="row">
@@ -36,18 +56,6 @@
                     </thead>
                     <tbody>
 
-                    <div class="row mt-3">
-                    <div class="col-md-3">
-                    <?php if(empty($shop)) : ?>
-                        <tr>
-                        <td colspan="4">
-                        <div class="alert alert-danger" role="alert">
-                            Data not found!
-                        </div>
-                        </td>
-                        </tr>
-                    <?php endif; ?>
-
                     <?php
                     $no=1; 
                     foreach ($shop as $sh) : ?>
@@ -63,9 +71,7 @@
                             
                             <a href="<?= base_url(); ?>admin/editProduct/<?= $sh['id'] ?>" class="badge badge-info float-right">edit</a>
 
-                            <a href="<?= base_url(); ?>admin/updateProduct/<?= $sh['id'] ?>" class="badge badge-info float-right">update</a>
-
-                            <a href="<?= base_url(); ?>admin/delete/<?= $sh['id'] ?>" class="badge badge-danger float-right button-delete">delete</a>
+                            <a href="<?= base_url(); ?>admin/deleteProduct/<?= $sh['id'] ?>" class="badge badge-danger float-right button-delete">delete</a>
                         </td>
                         </tr>
                     <?php endforeach; ?>

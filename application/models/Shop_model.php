@@ -29,6 +29,12 @@ class Shop_model extends CI_model {
         return $this->db->get('shop')->result_array();
     }
 
+    public function getProductID($id)
+    {
+        return $this->db->get_where('shop', ['id'=> $id])->row_array();
+    }
+
+
 
 
 }

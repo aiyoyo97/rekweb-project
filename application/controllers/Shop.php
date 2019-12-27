@@ -21,5 +21,17 @@ class Shop extends CI_Controller {
         $this->load->view('templates/footer');
 
     }
+    
+    public function detail($id)
+    {
+        $this->load->model('Shop_model');
+        $data['shop'] = $this->Shop_model->getProductID($id);
+        $data['title'] = 'Detail Page';
+        $this->load->view('templates/header', $data);
+        $this->load->view('shop/detail', $data);
+        $this->load->view('templates/footer');
+    }
+
+
 
 }
