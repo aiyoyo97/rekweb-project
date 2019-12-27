@@ -13,7 +13,8 @@
             <div class="input-group mb-3">
               <input type="text" class="form-control input-keyword" placeholder="Search Essence Beauty" name="keyword" >
               <div class="input-group-append">
-                <button class="btn btn-light" type="submit">Search</button>
+                <!-- <button class="btn btn-light" type="submit">Search</button> -->
+                <button class="btn btn-transparent" style="background-color: rgba(245,52,103,0.39)" type="button">Search</button>
               </div>
             </div>
             </form>
