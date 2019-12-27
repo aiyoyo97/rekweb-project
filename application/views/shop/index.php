@@ -13,11 +13,7 @@
             <div class="input-group mb-3">
               <input type="text" class="form-control input-keyword" placeholder="Search Essence Beauty" name="keyword" >
               <div class="input-group-append">
-<<<<<<< HEAD
-              <button class="btn btn-transparent" style="background-color: rgba(245,52,103,0.39)" type="button">Search</button>
-=======
                 <button class="btn btn-light" type="submit">Search</button>
->>>>>>> 754b679ba303e0aac8e57f7b054982b158c1d514
               </div>
             </div>
             </form>
